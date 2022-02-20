@@ -1,59 +1,106 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-:root {
-  --dark-background-color: #1f2937;
-  --hero-primary-text: #f9faf8;
-  --hero-secondary-text: #e5e7eb;
-  --button-and-cta-color: #3882f6;
-  --body-primary-bold-black: #1f2937;
-  --quote-background: #e5e7eb;
-  --quote-text-color: #1f2937;
-}
+
+/* SETUP */
 
 * {
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
-.header {
-  background-color: #1f2937;
-  display: flex;
-  flex-direction: column;
-  color: white;
-  font-size: 24px;
+picture {
+  display: block;
 }
-.top {
-  display: flex;
-  padding: 115px;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 0;
-  padding-top: 20px;
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
-.links a {
-  font-size: 18px;
-  gap: 35px;
-  color: #e5e7eb;
+
+a {
+  display: block;
+  color: inherit;
   text-decoration: none;
 }
-.links {
-  display: flex;
-  gap: 80px;
-  padding: 45px;
-  justify-content: space-between;
-  padding-bottom: 0;
-  padding-top: 10px;
-}
-.bot {
-  background-color: #1f2937;
-  display: flex;
-  padding: 50px;
-  gap: 50px;
-  justify-content: space-around;
-}
-.top-left {
+
+p a, li a, h2 a, h3 a {
+  color: blue;
+  text-decoration: underline;
 }
 
-.sign-up {
+/* TYPOGRAPHY */
+.loud-voice {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.calm-voice {
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+
+/* COMPONENTS */
+.button {
+  background-color: grey;
+  color: black;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+
+}
+
+
+/* MODULES */
+graphic-diptych {
+  display: block;
+}
+
+graphic-diptych text-content {
+  display: block;
+}
+
+
+@media (min-width: 700px) {
+  graphic-diptych {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+  }
+  graphic-diptych :is(text-content, picture) {
+    flex-basis: 50%;
+  }
+}
+
+
+
+
+
+header, footer, main {
+  border: 3px solid red;
+
+ }
+
+section {
+  border: 4px solid lime;
+  
+}
+
+/*  STRUCTURE */
+body {
+  display: flex;
+  flex-direction: column;
+ 
+  min-height: 100vh; /* makes sure that it fills the page */
+}
+
+main {
+  flex-grow: 1;
+  
+}
+
+
+inner-column {
+  display: block;
+  border: 4px solid orange;
+  padding: 10px;
 }
