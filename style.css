@@ -2,8 +2,17 @@
 
 /* SETUP */
 
+
 * {
   box-sizing: border-box;
+}
+
+.allaround {
+  background-color: #E5E7EB;
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 picture {
@@ -29,23 +38,29 @@ p a, li a, h2 a, h3 a {
 
 /* TYPOGRAPHY */
 .loud-voice {
-  font-size: 35px;
-  font-weight: 700;
+  font-size: 48px;
+  font-weight: 900;
   line-height: 1;
+  color: #f9faf8;
 }
 
 .calm-voice {
-  font-size: 1rem;
+  font-size: 18px;
+  color: #E5E7EB;
   line-height: 1.3;
 }
 
 
 /* COMPONENTS */
 .button {
-  background-color: grey;
-  color: black;
+  display: inline-block;
+  background-color: #3882F6;
+  color: white;
   padding: 10px 20px;
   font-size: 1.2rem;
+  padding: 0.6em 1em;
+  border-radius: 12px;
+  
 
 }
 
@@ -53,10 +68,27 @@ p a, li a, h2 a, h3 a {
 /* MODULES */
 graphic-diptych {
   display: block;
+  display: flex;
+ flex-direction: column;
+ gap: 20px;
+
+}
+
+graphic-diptych picture {
+gap: 20px;
 }
 
 graphic-diptych text-content {
   display: block;
+
+}
+
+graphic-diptych text-content p {
+  margin-top: 10px;
+}
+
+graphic-diptych text-content .button {
+  margin-top: 10px;
 }
 
 
@@ -64,7 +96,6 @@ graphic-diptych text-content {
   graphic-diptych {
     display: flex;
     flex-direction: row-reverse;
-    gap: 20px;
   }
   graphic-diptych :is(text-content, picture) {
     flex-basis: 50%;
@@ -72,10 +103,7 @@ graphic-diptych text-content {
 }
 
 
-
-
-
-header, footer, main {
+/* header, footer, main {
   border: 3px solid red;
 
  }
@@ -83,7 +111,9 @@ header, footer, main {
 section {
   border: 4px solid lime;
   
-}
+}   */
+
+
 
 /*  STRUCTURE */
 body {
@@ -101,6 +131,88 @@ main {
 
 inner-column {
   display: block;
-  border: 4px solid orange;
+  /* border: 4px solid orange; */
   padding: 10px;
+  width: 98%;
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* random shit */
+
+.first_background {
+  background-color: #1f2937;
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #1f2937;
+  color: #f9faf8;
+  font-size: 24px;
+  padding: 0;
+  padding-top: 0px;
+}
+
+.ul-flex {
+  display: flex;
+  flex: 2;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 45px;
+}
+
+
+/* settings */
+
+html {
+  --white: #efefef;
+
+}
+
+
+.projects {
+background-color: white;
+text-align: center;
+}
+
+.quotey {
+  background-color: #E5E7EB;
+  
+  color: #1f2937;
+  font-size: 36px;
+  display: block;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.baylinquote {
+  display: flex;
+  text-align: center;
+  font-weight: 200;
+  font-style: italic;
+ justify-content: center;
+ padding-right: 167px;
+}
+
+.whosaid {
+  display: flex;
+  justify-content: end;
+  padding-top: 30px;
+  font-weight: 700;
+}
+
+.call-to-action {
+  background-color: white;
+  text-align: center;
+}
+
+.footerend {
+  background-color: #1f2937;
+  color: #E5E7EB;
+  font-size: 4px;
+  font-weight: 100;
+  text-align: center;
 }
